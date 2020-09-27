@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Aide datalogger</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="headcl">
+      <h1>Ced electronics design</h1>
+    </header>
+    <!-- Menu de navigation -->
+    <nav id="menu">
+      <ul>
+        <li class="menu-menus"><a href="#menus">Menus</a>
+          <ul class="submenu">
+            <li><a href="#fichier">Fichier</a></li>
+            <li><a href="#edition">Édition</a></li>
+            <li><a href="#serial">Port série</a></li>
+            <li><a href="#help">Aide</a></li>
+          </ul>
+        </li>
+        <li class="menu-config"><a href="#config">Configuration</a>
+          <ul class="submenu">
+            <li><a href="#appconf">Préférences</a></li>
+            <li><a href="#serialconf">Port série</a></li>
+            <li><a href="#editfilter">Édition du filtre</a></li>
+          </ul>
+        </li>
+        <li class="menu-help"><a href="#measure">Mesures</a>
+          <ul class="submenu">
+            <li><a href="#arduino">Données Arduino</a></li>
+            <li><a href="#measuring">Lancer une mesure</a></li>
+            <li><a href="#files">Fichiers enregistrés</a></li>
+          </ul>
+        </li>
+        <li class="menu-contact"><a href="#about">A propos</a></li>
+      </ul>
+    </nav>
+    <!-- Banniere -->
+    <div class="banner">
+      <h1>The poorman's datalogger</h1>
+      <img src="images/splash.png" alt="Image">
+      <p><br>
+        Un datalogger simple basé sur une carte Arduino</p>
+    </div>
+    <!-- Description des menus -->
+    <div class="menu-contents">
+      <p><br>
+      </p>
+      <h3 id="menus">Les menus du logiciel</h3>
+      <h4 id="fichier">Fichier:</h4>
+      <dl>
+        <dt>Enregistrer:</dt>
+        <dd>Enregistrer les données sur le disque dur, idem au bouton
+          'Enregistrer'.</dd>
+      </dl>
+      <dl>
+        <dt>Ouvrir:</dt>
+        <dd>Ouvrir et afficher un fichier sauvegardé, idem au bouton 'Ouvrir'.</dd>
+      </dl>
+      <dl>
+        <dt>Quitter:</dt>
+        <dd>Quitter le programme, idem au bouton 'Quitter'.</dd>
+      </dl>
+      <h4 id="edition">Edition:</h4>
+      <dl>
+        <dt>Préférences:</dt>
+        <dd>Configurer les paramètres du logiciel.</dd>
+      </dl>
+      <dl>
+        <dt>Editer le filtre:</dt>
+        <dd>Editer le filtre de traitement des données reçues.</dd>
+      </dl>
+      <dl>
+        <dt>Utiliser le filtre:</dt>
+        <dd>Cocher ou non la case pour activer/désactiver le filtre.</dd>
+      </dl>
+      <h4 id="serial">Port série:</h4>
+      <dl>
+        <dt>Configurer:</dt>
+        <dd>Configurer les paramètres du port série, idem au bouton
+          'Configurer'.</dd>
+      </dl>
+      <dl>
+        <dt>Connecter:</dt>
+        <dd>Se connecter à la carte Arduino, idem au bouton 'Connecter'.</dd>
+      </dl>
+      <h4 id="help">Aide:</h4>
+      <dl>
+        <dt>Aide:</dt>
+        <dd>Affiche cette page.</dd>
+      </dl>
+      <dl>
+        <dt>A propos:</dt>
+        <dd>Affiche une fenêtre d'info.</dd>
+      </dl>
+      <dl>
+        <dt>A propos de Qt:</dt>
+        <dd>Affiche une fenêtre d'info sur Qt.</dd>
+      </dl>
+      <p><br>
+      </p>
+      <p><a href="#menu">Menu</a></p>
+      <p><br>
+      </p>
+    </div>
+    <!-- Configuration du logiciel -->
+    <div class="config-content">
+      <p><br>
+      </p>
+      <h3 id="config">Configuration du logiciel</h3>
+      <h4 id="appconf">Les paramètres du logiciel:</h4>
+      <div>
+        <p><span style="color: #B61;">Taille du buffer :</span> nombre de
+          mesures effectuées (par défaut 1200).<br>
+          Cette valeur peut être adaptée selon les besoins de l'utilisateur. </p>
+        <p><span style="color: #B61;">Titre du graphique :</span> donnez un
+          titre explicite à vos données (ex: Hygrométrie le 14/07/2020)<br>
+          Ce titre sera enregistré si vous sauvegardez les données. </p>
+        <p><span style="color: #B61;">Vitesse d'echantillonage :</span>
+          sélectionnez l'unité (millisecondes, secondes ou minutes) puis une
+          valeur.<br>
+          Cette valeur, en relation avec la taille du buffer, va déterminer le
+          temps d'enregistrement.<br>
+          Ainsi avec une lecture par seconde et un buffer de 1200 points nous
+          avons (1x1200/60) 20 minutes d'enregistrement. </p>
+        <p><span style="color: #B61;">Nom et unité des données : </span>Ceci
+          est affiché sur l'axe y du graphique.<br>
+          Si une unité SI est fournie, le graphique utilisera automatiquement
+          les multiples. </p>
+        <p><span style="color: #B61;">Min et max de l'axe Y : </span>Ces
+          paramètres permettent de régler la plage d'affichage du graphique. </p>
+        <p><span style="color: #B61;">Couleur du graphique : </span>Un clic sur
+          le bouton fera apparaître un sélecteur de couleurs.<br>
+          Vous pourrez choisir la couleur de la ligne du graphique. </p>
+        <p><span style="color: #B61;">Utiliser le filtre : </span>Cochez ou
+          décochez cette case pour utiliser ou non le filtre interne.<br>
+          Si cette case est décochée les données brutes issues du port série
+          seront utilisées. </p>
+        <p><span style="color: #B61">Langues : </span>Sélectionnez la langue de
+          l'interface. </p>
+        <br>
+        <p>Cliquez 'Enregistrer' pour sauvegarder ces paramètres comme
+          paramètres par défaut.</p>
+        <p>Cliquez 'Ok' pour utiliser ces paramètres pendant la session courante
+          uniquement.</p>
+      </div>
+      <p><br>
+      </p>
+      <h4 id="serialconf">Les paramètres du port série:</h4>
+      <div>
+        <p><span style="color: #B61;">Port série : </span>Sélectionnez dans la
+          liste le port à utiliser.<br>
+          Si la carte arduino a été branchée recement, utilisez le bouton 'scan'
+          pour rechercher de nouveaux ports. </p>
+        <p><span style="color: #B61;">Baud rate : </span>Sélectionnez la bonne
+          vitesse de connexion (57600 par défaut). </p>
+        <p><span style="color: #B61;">Bits de données : </span>Sélectionnez la
+          bonne valeur ((8 par défaut).) </p>
+        <p><span style="color: #B61;">Bits de parité et d'arrêt : </span>Sélectionnez
+          les bonnes valeurs. </p>
+        <p><span style="color: #B61;">Autres : </span>La boite de dialogue
+          permet de spécifier d'autres paramètres.<br>
+          Ceux-ci ne sont pas utilisés par le logiciel et on peut laisser les
+          valeurs par défaut. </p>
+        <br>
+        <p>Cliquez 'Ok' pour confirmer les modifications</p>
+      </div>
+      <p><br>
+      </p>
+      <h4 id="editfilter">Éditer le filtre de traitement:</h4>
+      <div>
+        <p>Le filtre de traitement est une fonction python destinée à traiter
+          les données reçues du port série.<br>
+          Celle-ci peut être éditée dans le logiciel via un éditeur intégré ou
+          en éditant le fichier tools/datafilters.py.<br>
+          Par défaut cette fonction convertit une valeur de l'ADC arduino (0 -
+          1023) en une tension (0 - 5V) mais pourra effectuer n'importe quel
+          traitement.<br>
+          Bien sûr il faudra qu'il s'agisse de code python valide sous peine de
+          faire planter le logiciel.</p>
+      </div>
+      <p><br>
+      </p>
+      <p><a href="#menu">Menu</a></p>
+      <p><br>
+      </p>
+    </div>
+    <!-- Realiser des mesures -->
+    <div class="measure-content">
+      <p><br>
+      </p>
+      <h3 id="measure">Réaliser des mesures</h3>
+      <h4 id="arduino">Les donnés de la carte arduino:</h4>
+      <div>
+        <p>La carte arduino (ou toute carte disposant d'une communication série)
+          peut mesurer n'importe quel type de capteur (tension, température
+          etc). Toutefois, la valeur envoyée par le port série doit être un
+          float,seul type reconnu par le logiciel. </p>
+        <p>Cette valeur pourra être traitée par la carte et ne pas utiliser le
+          filtre interne ou fournir une valeur brute traitée ensuite par le
+          logiciel.</p>
+      </div>
+      <p><br>
+      </p>
+      <h4 id="measuring">Lancer une mesure:</h4>
+      <div>
+        <p>Pour effectuer une acquisition depuis la carte arduino :</p>
+        <ol>
+          <li>
+            <p>Cliquer 'Conf. série' ou Menu-&gt;Port série-&gt;Configurer.<br>
+              Une fois le port correctement configuré, le bouton 'Connecter' est
+              disponible. </p>
+          </li>
+          <li>
+            <p>Cliquer 'Connecter' ou Menu-&gt;Port série-&gt;Connecter.<br>
+              Le logiciel se connecte à la carte arduino. Le bouton 'Démarrer'
+              est disponible. </p>
+          </li>
+          <li>
+            <p>Cliquer 'Démarrer'. On vous demandera si vous voulez effacer le
+              buffer.<br>
+              Le bouton devient 'Stop' et vous permet d’arrêter l'acquisition
+              des données.<br>
+              Vous pouvez cliquer à nouveau sur 'Démarrer' et reprendre la
+              lecture (sans effacer le buffer)<br>
+              ou recommencer l'acquisition en effaçant le buffer.<br>
+              L'acquisition s'arrête automatiquement lorsque le buffer est
+              plein. </p>
+          </li>
+        </ol>
+      </div>
+      <p><br>
+      </p>
+      <h4 id="files">Les fichiers sauvegardés :</h4>
+      <div>
+        <p><span style="color: #B61">Enregistrer un fichier :</span>Lorsque le
+          logiciel a démarré la lecture vous pouvez à tout moment<br>
+          enregistrer les données dans un fichier pour une analyse ultérieure en
+          cliquant sur le bouton 'Enregistrer'. </p>
+        <p><br>
+        </p>
+        <p><span style="color: #B61">Charger un fichier : </span>Lorsque le
+          logiciel n'est pas en mode acquisition, vous pouvez charger un fichier<br>
+          enregistré en cliquant sur 'Ouvrir' ou Menu-&gt;Fichier-&gt;Ouvrir.
+          Les données sont alors affichées sur le graphique.<br>
+          En utilisant la souris vous pourrez zoomer et vous déplacer dans le
+          graphique (ceci est vrai aussi pendant l'acquisition!).<br>
+          Un clic droit sur le graphique ouvre un menu vous permettant entre
+          autres d'enregistrer une image du graphique (export). </p>
+      </div>
+      <p><br>
+      </p>
+      <p><a href="#menu">Menu</a></p>
+      <p><br>
+      </p>
+    </div>
+    <!-- Realiser des mesures -->
+    <div class="about-content">
+      <p><br>
+      </p>
+      <h3 id="about">A propos de l'auteur / credits</h3>
+      <div>
+        <p><span style="color: #B61">Le logiciel : </span>Ce logiciel a été
+          développé sous Python 3 et utilise la librairie PyQt5 pour l'interface
+          graphique.<br>
+          Il utilise la librairie PyQtGraph pour gérer le graphique et pyserial
+          pour les communications série.<br>
+          <br>
+          Ce logiciel est distribué sous licence open source GNU GPL3.<br>
+          Vous pouvez l'utiliser, le modifier ou l’améliorer librement et
+          gratuitement tant que vous respectez les termes de la licence.<br>
+          <br>
+          Ce logiciel a été développé en tant qu'exercice d'apprentissage /
+          amélioration en python (et HTML/CSS).<br>
+          J'aimerais donc remercier tous ceux qui ont pris le temps de mettre en
+          ligne les tutoriels indispensables aux néophytes. </p>
+        <p><span style="color: #B61">Qui suis-je? </span>Je m’appelle Cedric
+          Pereira, je suis diplômé en génie électrique et passionné
+          d'électronique et d'informatique<br>
+          depuis de nombreuses années.<br>
+          Vous pouvez me contacter sur <a href="mailto:cedelecdesign@gmail.com">cedelecdesign@gmail.com</a>.
+        </p>
+      </div>
+      <p><br>
+      </p>
+      <p><a href="#menu">Menu</a></p>
+      <p><br>
+      </p>
+    </div>
+    <!-- bas de page -->
+    <footer class="foot">
+      <p>Copyright 2020 Cedric Pereira</p>
+    </footer>
+  </body>
+</html>

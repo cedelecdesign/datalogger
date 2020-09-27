@@ -1,0 +1,193 @@
+body{
+    font-family: 'Source code pro', 'Calibri', serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #DDD
+}
+
+nav{
+    width: 100%;
+    background-color: rgb(100, 100, 100);
+}
+
+nav > ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav > ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav > ul > li{
+    float: left;
+    position: relative;
+}
+
+nav > ul > li > a{
+    padding: 10px 30px;
+    color: #FFF;
+}
+
+nav > ul > li:hover a{
+    padding: 8px 30px 10px 30px;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+.submenu{
+    display: none;
+}
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav li:hover .submenu{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 1000;
+}
+
+.submenu li{
+    border-bottom: 1px solid #CCC;
+}
+
+.submenu li a{
+    padding: 15px 30px;
+    font-size: 15px;
+    color: #222538;
+    width: 180px;
+    /*border-left: 1px solid black;
+    border-right: 1px solid black;*/
+    border-bottom: 1px solid black;
+}
+
+.menu-menus:hover{
+    border-top: 2px solid #00B;
+    background-color: rgba(220, 220, 220, 0.15);
+}
+
+.menu-config:hover{
+    border-top: 2px solid #00B;
+    background-color: rgba(220, 220, 220, 0.15);
+}
+
+.menu-help:hover{
+    border-top: 2px solid #00B;
+    background-color: rgba(220, 220, 220, 0.15);
+}
+
+.menu-contact:hover{
+    border-top: 2px solid #00B;
+    background-color: rgba(220, 220, 220, 0.15);
+}
+
+.menu-menus .submenu, .menu-config .submenu, .menu-help .submenu{
+    background-color: rgb(200, 200, 200);
+}
+
+
+.submenu li:hover a{
+    color: #FFF;
+    
+}
+
+.menu-menus .submenu li:hover{
+    background-color: rgb(100, 100, 100);
+}
+.menu-config .submenu li:hover{
+    background-color: rgb(100, 100, 100);
+}
+.menu-help .submenu li:hover{
+    background-color: rgb(100, 100, 100);
+}
+
+
+.banner{
+    text-align: center;
+}
+
+.banner img{
+    padding: 0px;
+    border: 1px solid #CCC;
+    box-shadow: 0px 0px 15px #000;
+}
+
+.banner h1{
+    color: blue;
+}
+.banner p{
+    color: #86A;
+}
+
+.headcl{
+    color: #86A;
+    text-align: center;
+}
+
+.foot{
+    text-align: center;
+    color: #86A;
+    font-size: 15px;
+}
+
+.menu-contents, .config-content, .measure-content, .about-content{
+    text-indent: 30px;
+    background-color: #BBB;
+}
+.menu-contents h3, .config-content h3, .measure-content h3, .about-content h3{
+    color: #33F;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    display: inline;
+    margin-left: 30px;
+}
+.menu-contents h4, .config-content h4, .measure-content h4, .about-content h4{
+    color: #37D;
+}
+
+.menu-contents a, .config-content a, .measure-content a, .about-content a{
+    color: #86A;
+    text-indent: 30px;
+    text-decoration: none;
+    border: 1px solid #86A;
+    border-radius: 3px;
+    padding: 3px;
+}
+.menu-contents a:hover, .config-content a:hover, .measure-content a:hover, .about-content a:hover{
+    background-color: #000;
+    color: #FFF;
+}
+
+.config-content{
+    background-color: #BCB;
+}
+.measure-content{
+    background-color: #BDB;
+}
+.measure-content div, .config-content div, .measure-content div, .about-content div{
+    margin-left: 50px;
+    margin-top: 5px;
+    text-indent: 0px;
+    padding: 0px;
+}
+.about-content{
+    background-color: #BCB;
+}
+.about-content div a{
+    border: none;
+    color: #008;
+}
+dt{
+    color: #B61;
+}
