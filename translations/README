@@ -1,0 +1,15 @@
+Datalogger translation system
+
+Files:
+	- lang.idx : List of supported languages. Used by the language selector dialog.
+
+	File format: language_name,language_code,translation_file
+	Example: English,en_US,datalogger_en
+
+	- translation_file (ex: datalogger_en) : Contains the translated strings.
+
+	File format : Starts with <<Datalogger translation file>>
+		This line is not actually used, just for info
+	Section: 
+
+

@@ -1,0 +1,79 @@
+<<Datalogger translation file>>
+[:datalogger,41
+Loading...
+Waiting...
+Exit
+Save
+Open
+Configure serial
+Preferences
+Connect
+About
+About Qt
+Help
+&File
+&Communication
+&Help
+Graph
+Value
+Sample rate
+Start
+Save to file
+Open file
+Measure
+Serial conf.
+System
+Erase data
+Erase data before (re)starting ?
+Stop
+Acquiring data from Serial
+Acquisition stopped
+Exit to system
+Are you sure you want to exit ?
+Buffer full
+Write CSV
+Write CSV file ?
+File error
+&Edit
+Edit filter
+Use filter
+Language
+Restart to change language.
+Configure TCP
+Use TCP
+
+[:serial,10
+Serial port configuration
+Scan
+Baud rate
+Data bits
+Parity
+Stop bits
+None
+Even
+Odd
+Unsupported platform
+
+[:help,2
+Manual
+File {} not found
+
+[:settings,11
+Graph title
+Buffer size
+X axis name
+Y axis range
+Value
+Graph color
+Use filter
+Sample rate
+Save settings
+Overwrite settings?
+Use TCP
+
+[:statistics,5
+Data statistics
+Mean value :
+Median value :
+Variance :
+Standard deviation :

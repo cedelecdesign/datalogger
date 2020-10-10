@@ -1,0 +1,79 @@
+﻿<<Datalogger translation file>>
+[:datalogger,41
+Chargement...
+En attente...
+Quitter
+Enregistrer
+Ouvrir
+Configuration série
+Préférences
+  Connecter
+A propos
+A propos de Qt
+Aide
+&Fichier
+&Communication
+&Aide
+Graphique
+Valeur
+Vitesse échant.
+  Démarrer
+  Enregistrer
+  Ouvrir
+Mesures
+  Configuration
+Système
+Effacer les données
+Effacer les données avant de (re)démarrer ?
+  Stop
+Acquisition depuis le port série
+Acquisition interrompue
+Quitter l'application
+Êtes vous sur de vouloir quitter ?
+Buffer plein
+Créer un fichier CSV
+Créer un fichier CSV ?
+Erreur de fichier
+&Edition
+Editer le filtre
+Utiliser le filtre
+Langue
+Redémarrez pour changer la langue.
+Configuration TCP
+Utiliser TCP
+
+[:serial,10
+Configuration du port serie
+Scan
+Baud rate
+Bits de données
+Parité
+Bits d'arrêt
+Aucune
+Paire
+Impaire
+Plateforme non reconnue
+
+[:help,2
+Mode d'emploi
+Fichier {} introuvable
+
+[:settings,11
+Titre du graphique
+Taille du buffer
+Axe X
+Gamme de l'axe Y
+Valeur
+Couleur du graphique
+Utiliser le filtre
+Vitesse d'éch.
+Enregistrer les paramètres
+Ecraser les données?
+Utiliser TCP
+
+[:statistics,5
+Staistiques
+Valeur moyenne :
+Valeur mediane :
+Variance :
+Deviation standard :
